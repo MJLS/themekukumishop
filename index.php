@@ -26,7 +26,7 @@
                     <h2><?php the_title();?></h2>
                     <div><?php /* the_content(); */ echo 'solo se muestra el título para no hacerlo largo'; ?></div>
                     </article>
-                <?php endwhile; ?>
+                <?php endwhile;?>
             <?php else: ?>
                     <p>Nada que mostrar.</p>
             <?php endif; ?>
