@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700&display=swap');
+
+$type: 'Poppins';
+
+
+
+@mixin typebase ( $size: 16px,$weight:100,$lineh: 0,$letters: 0 ) {
+    font-family: $type;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineh;
+    letter-spacing: $letters;
+}
+@mixin display1 () {
+    font-family: $type;
+    font-size: 5em;
+    line-height: 88px;
+    letter-spacing: 0;
+}
+@mixin display2(){
+    font-family: $type;
+    font-size: 3em;
+    line-height: 56px;
+    letter-spacing: 0;
+}
+@mixin display3(){
+    font-family: $type;
+    font-size: 2.5em;
+    line-height: 48px;
+    letter-spacing: 0;
+}
+@mixin display4(){
+    font-family: $type;
+    font-size: 2em;
+    line-height: 40px;
+    letter-spacing: 0;
+}
+@mixin h1(){
+    font-family: $type;
+    font-size: 2em;
+    line-height: 40px;
+    letter-spacing: 0;
+}
+@mixin h2(){
+    font-family: $type;
+    font-size: 1.5em;
+    line-height: 32px;
+    letter-spacing: 0;
+}
+@mixin h2Thin(){
+    font-family: $type;
+    font-size: 1.5em;
+    font-weight: 100;
+    line-height: 32px;
+    letter-spacing: 0;
+}
+@mixin h3(){
+    font-family: $type;
+    font-size: 1.25em;
+    line-height: 32px;
+    letter-spacing: 0;
+}
+@mixin h3Thin(){
+    font-family: $type;
+    font-size: 1.25em;
+    font-weight: 100;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+@mixin body1(){
+    font-family: $type;
+    
+}
+@mixin body2(){
+    font-family: $type;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+@mixin body2Bold(){
+    font-family: $type;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+@mixin label1(){
+    font-family: $type;
+    font-size: .8125em;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0;
+}
+@mixin label2(){
+    font-family: $type;
+    font-size: .75em;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0;
+}
+@mixin label3Thin() {
+    font-family: $type !important;
+    font-size: .75em !important;
+    font-weight: 200 !important;
+    line-height: 12px !important;
+    letter-spacing: 0 !important;
+}
+@mixin label3Bold(){
+    font-family: $type;
+    font-size: .75em;
+    font-weight:700;
+    line-height: 28px;
+    letter-spacing: 0;
+}
