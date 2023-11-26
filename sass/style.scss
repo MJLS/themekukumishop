@@ -21,6 +21,8 @@ D - Custom bootstrap
 @import 'color';
 @import 'type';
 @import 'html';
+@import 'wordpress';
+@import 'woocommerce';
 @import 'custom_bootstrap';
 
 
@@ -62,17 +64,6 @@ D - Custom bootstrap
         color: $base-negro;
     }
 
-    // .usermenu__user,
-    // .usermenu__cart {
-
-    //     width: 20px;
-
-    //     @media (max-width: 992px) {
-    //         width: 24px;
-    //         margin-left: 20px;
-    //     }
-
-    // }
 }
 
 /* B - COMPONENTS */
@@ -554,7 +545,8 @@ D - Custom bootstrap
             object-fit: cover;
             object-position: center;
         }
-
+        //NOTE: Modificado en woocommerce.scss
+        /*
         .product__info {
 
             display: flex;
@@ -569,6 +561,7 @@ D - Custom bootstrap
                 @include label3Bold();
             }
         }
+        */
     }
 
 }

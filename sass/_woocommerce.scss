@@ -1,0 +1,45 @@
+/* 1- Tienda */
+
+
+.products {
+
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em ;
+
+    li.product {
+        
+        list-style: none;
+        position: relative;
+        overflow: hidden;
+        height: fit-content;
+        
+       
+    }
+    li.product img {
+        margin: 0;
+        width: 100%;
+    }
+
+}
+
+.woocommerce-page img {
+    height: auto;
+    max-width: 100%;
+}
+
+li.product > a.woocommerce-LoopProduct-link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.woocommerce .products ul::after, .woocommerce .products ul::before, .woocommerce ul.products::after, .woocommerce ul.products::before{
+    display:none !important;
+}
+
+.onsale {
+    display:none;
+}
