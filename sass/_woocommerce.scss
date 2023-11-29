@@ -1,43 +1,68 @@
 /* 1- Tienda */
 
 
+
+
+/* psuedoclases ::after y ::before antes del loop de productos. Eliminadas 
+ * para cuadrarlas con el grid */
+
+.products ul::after,
+.products ul::before,
+ul.products::after, 
+ul.products::before {
+    display:none !important;
+}
+
+/* Modificamos el aspecto de cada items dentro del loop de productos. */
+
+.woocommerce ul.products[class*=columns-] li.product,.woocommerce-page ul.products[class*=columns-] li.product {
+    width: 100%;
+    float:none;
+    clear: none;
+    margin: 0;
+}
+
+
+$columns:4;
+
 .products {
 
+    
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    
     grid-gap: 2em ;
 
-    li.product {
-        
-        list-style: none;
-        position: relative;
-        overflow: hidden;
-        height: fit-content;
-        
-       
-    }
-    li.product img {
-        margin: 0;
-        width: 100%;
+    @media (max-width:992px){
+        $columns:3;
+        grid-template-columns: repeat($columns, 1fr);
     }
 
-}
+    @media (max-width:768px){
+        $columns:2;
+        grid-template-columns: repeat($columns, 1fr);
+    }
+    @media (max-width:480px){
+        $columns:1;
+        grid-template-columns: repeat($columns, 1fr);
+    }
+    grid-template-columns: repeat($columns, 1fr);
 
-.woocommerce-page img {
-    height: auto;
-    max-width: 100%;
-}
+   .product {
 
-li.product > a.woocommerce-LoopProduct-link {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
+        list-style: none !important;
+        position: relative !important;
+        overflow: hidden !important;
+        height: fit-content !important;
+    
+        .woocommerce-LoopProduct-link {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+   }
 
-.woocommerce .products ul::after, .woocommerce .products ul::before, .woocommerce ul.products::after, .woocommerce ul.products::before{
-    display:none !important;
 }
 
 .onsale {

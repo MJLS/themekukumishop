@@ -46,9 +46,9 @@ function kukumishop_theme_config(){
         'thumbnail_image_width' => 300,
         'single_image_width'	=> 300,
         'product_grid' 			=> array(
-            'default_rows'    => 10,
-            'min_rows'        => 4,
-            'max_rows'        => 10,
+            'default_rows'    => 1,
+            'min_rows'        => 8,
+            'max_rows'        => 8,
             /* NOTE:Establecemos a 1 para que el usuario no pueda modificarlo en customizer pues vamos a definirlo nosotros */
             'default_columns' => 1,
             'min_columns'     => 1,
@@ -59,6 +59,14 @@ function kukumishop_theme_config(){
     add_theme_support( 'wc-product-gallery-zoom' );
     add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
+
+    /* NOTE:Añadimos soporte para logo corporativo */
+    add_theme_support( 'custom-logo' , array (
+        'height'        => 116,
+        'width'         => 68,
+        'flex-height'   => true,
+        'flex-width'   => true
+    ));
 
     if ( ! isset( $content_width ) ) {
         $content_width = 600;

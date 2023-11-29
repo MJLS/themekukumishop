@@ -25,11 +25,29 @@
         <!-- header -->
         <header id="header" class="my-2 sticky-top p-0 d-flex justify-content-center">
             <nav class="navbar navbar-expand-lg container-fluid p-0 m-auto d-flex justify-content-center">
-                <div class="container-xl m-2 p-0 d-flex justify-content-between">
+                <div class="container-xl mx-3 my-2 p-0 d-flex justify-content-between">
                     <!-- brand -->
-                    <div id="brand" class="row order-lg-0 order-1 justify-content-center">
-                        <img class="brand__logo" src="../asset/img/logo_simple_para_fondo_blanco.png" alt="logo kukumi">
-                        <span class="brand__title d-xl-block d-lg-block d-sm-none">kukumi</span>
+                    <div id="brand" class="order-lg-0 order-1">
+                        <!-- <img class="brand__logo" src="../asset/img/logo_simple_para_fondo_blanco.png" alt="logo kukumi"> -->
+                        <!-- NOTE: Customizer logo -->
+                        <?php //the_custom_logo(); ?>
+                        
+								<?php if( has_custom_logo() ): ?>
+									<?php the_custom_logo(); ?> 
+                                    <span> 
+                                        <?php /*
+                                        NOTE: Deshabilitamos por defecto título de sitio que acompañe a logo 
+                                        Por defecto solo cuando no haya logo  
+                                        bloginfo( 'title' ); */ 
+                                        ?>  
+                                      </span>
+								<?php else: ?>
+                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+									   <span> <?php bloginfo( 'title' ); ?> </span> 
+                                    </a>
+                                <?php endif; ?>
+							
+
                     </div>
                     <!-- menu toggler -->
                     <button 
