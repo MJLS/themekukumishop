@@ -1,6 +1,7 @@
 /*
 kukumi style V1.0
 A - HEADER
+    A.1 Canva menu ppal
 B - COMPONENTES
     B.1 Title section
 1. HOME 
@@ -59,6 +60,9 @@ D - Custom bootstrap
 }
 
 
+
+
+
 #usermenu {
 
     width: 100px;
@@ -67,6 +71,43 @@ D - Custom bootstrap
         color: $base-negro;
     }
 
+}
+
+.usermenu__cart {
+    position: relative;
+    .usermenu__cartcount {
+        display: flex;
+        width: 15px;
+        height: 15px;
+   
+        position:absolute;
+        bottom:0;
+        right: 10px;
+        background-color: $neutral-800;
+        color: $base-blanco;
+        border-radius:50%;
+        @include typebase ( $size: .6em ,$weight:100,$lineh: 0,$letters: 0 );
+        justify-content: center;
+        align-items: center;
+    }
+ }
+
+
+/* A.1 Canva menu ppal */
+.mvmenu__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .mvmenu__item {
+        margin: 10px 0;
+        @include body2();
+    }
+}
+
+/* A.2 Canva menu carrito */
+.woocommerce-cart-form {
+    font-family: $type;
 }
 
 /* B - COMPONENTS */
