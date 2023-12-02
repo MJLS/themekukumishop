@@ -67,3 +67,29 @@ $columns:4;
 }
 
 /* 2 - Carrito Sidebar */
+#kukumicart {
+   
+    * {
+        font-family: $type;
+    }
+
+    
+
+    .is-mobile table.wc-block-cart-items .wc-block-cart-items__row {
+        grid-template-columns: 150px 132px;
+    }
+
+    .wc-block-cart-items__row {
+        position: relative;
+        border:none !important;
+    }
+
+    .wc-block-components-product-metadata{
+        display:none;
+    }
+    .wc-block-cart-item__quantity {
+        svg {
+            position:absolute;
+        }
+    }
+}

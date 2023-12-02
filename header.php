@@ -34,8 +34,7 @@
                     <!-- <img class="brand__logo" src="../asset/img/logo_simple_para_fondo_blanco.png" alt="logo kukumi"> -->
                     <!-- NOTE: Customizer logo -->
 
-                    <?php //the_custom_logo(); 
-                    ?>
+                    <i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>
 
                     <?php if (has_custom_logo()) : ?>
                         <?php the_custom_logo(); ?>
@@ -136,24 +135,34 @@
     <!-- offcanvas carrito -->
     <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
-            <!-- <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Carrito</h5> -->
+
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                <br>
+                <br>
+                
+                <?php 
+                   
+                  
+                    echo "Llevas ". WC()->cart->get_cart_contents_count() ." articulo/os en tu cesta ";
+                ?>
+            </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-        <?php
-            /* 
-                PROBLEMA: 
-                    - Renderizar el contenido del carrito en un componente canvasoff de bootstrap. 
-                    - Añadir o quitar (cantidad de items) desde ese mismo carrito sin perder ninguna funcionalidad (subtotal, totales...).
-                    - Contenido se debe comportar como la página carrito es decir de forma asincrona.
+        <div class="offcanvas-body" id="kukumicart">
+            <?php
+                /* 
+                    PROBLEMA: 
+                        - Renderizar el contenido del carrito en un componente canvasoff de bootstrap. 
+                        - Añadir o quitar (cantidad de items) desde ese mismo carrito sin perder ninguna funcionalidad (subtotal, totales...).
+                        - Contenido se debe comportar como la página carrito es decir de forma asincrona.
+                    
+                    SOLUCION:
+                        - Obtenemos el ID de la página "carrito" (ID 8) de wc para obligar a que siempre se muestre el mismo contenido a lo largo de toda la aplicación.
+                        - Como es un bloque usamos el filtro 'the_content' para renderizar correctamente nuestro contenido.
+                */
                 
-                SOLUCION:
-                    - Obtenemos el ID de la página "carrito" de wc para obligar a que siempre se muestre el mismo contenido a lo largo de toda la aplicación.
-                    - Como es un bloque usamos el filtro 'the_content' para renderizar correctamente nuestro contenido.
-            */
-            
-            $page = get_post(8);
-            echo apply_filters('the_content', $page->post_content);
-        ?>
+                $page = get_post(8);
+                echo apply_filters('the_content', $page->post_content);
+            ?>
         </div>
     </div>

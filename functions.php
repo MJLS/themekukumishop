@@ -22,10 +22,13 @@ function  kukumishop_scripts()
 
     /* Flickyti 2.3 JS */
     wp_enqueue_script('flickyti-js', get_template_directory_uri() . '/inc/flickyti23/flickyti.min.js', array('jquery'), '2.3', true);
-
+    
     /* Flickyti 2.3 */
     wp_enqueue_style('flickyti-css', get_template_directory_uri() . '/inc/flickyti23/flickyti.min.css', array(), '2.3', 'all');
-
+    
+    /* Kukumi.js */
+    wp_enqueue_script('kukumishop-js', get_template_directory_uri() . '/inc/kukumishop.js', array('jquery'), '1.0', true);
+    
     /* Style.css */
     wp_enqueue_style('kukumishop-style', get_stylesheet_uri(), array(), filemtime(get_template_directory() . '/style.css'), 'all');
 }
