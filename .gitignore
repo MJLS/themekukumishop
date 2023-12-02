@@ -1,0 +1,42 @@
+# Archivos de sistema
+*.DS_Store
+
+# Archivos de estilo
+
+*.css
+*.css.map
+
+# Archivos de caché
+*.cache
+
+# Archivos de registro
+*.log
+
+# Archivos de configuración
+*.config
+
+# Archivos de compilación
+*.o
+*.obj
+*.exe
+*.a
+*.so
+*.dll
+
+# Archivos de depuración
+*.dSYM
+*.pdb
+
+# Archivos de documentación
+*.md
+*.rst
+*.pdf
+*.doc
+*.docx
+
+# Archivos de pruebas
+*.test
+
+# Carpetas de terceros
+node_modules
+bower_components
